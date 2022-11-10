@@ -20,6 +20,5 @@ import { UserMiddleware } from './middleware/user/user.middleware';
 export class UsersModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(UserMiddleware).forRoutes('users');
-    // throw new Error('Method not implemented.');
   }
 }
