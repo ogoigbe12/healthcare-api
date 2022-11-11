@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
-import { User, UserDocument } from 'src/users/Schema/user.schema';
+import { User, UserDocument } from 'src/users/schema/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import * as bcrypt from 'bcrypt';
@@ -11,7 +11,7 @@ export class UsersService {
   constructor(
     @InjectModel(User.name) private userModel: Model<UserDocument>,
     private jwtService: JwtService,
-  ) {}
+  ) { }
   async createUser(userDetails: CreateUserDto) {
     const findEmail = await this.userModel.findOne({
       email: userDetails.email,

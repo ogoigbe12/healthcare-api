@@ -5,14 +5,14 @@ import { TreatmentDto } from 'src/treatment-plan/dtos/treatment.dto';
 import {
   Treatment,
   treatmentDocument,
-} from 'src/treatment-plan/Schema/treatment.schema';
+} from 'src/treatment-plan/schema/treatment.schema';
 
 @Injectable()
 export class TreatmentPlanService {
   constructor(
     @InjectModel(Treatment.name)
     private treatmentModel: Model<treatmentDocument>,
-  ) {}
+  ) { }
   async createTreatment(treatmentDetails: TreatmentDto) {
     const newTreatment = await this.treatmentModel.create(treatmentDetails);
     if (!newTreatment) {

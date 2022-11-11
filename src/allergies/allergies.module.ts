@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AllergiesController } from './controller/allergies/allergies.controller';
-import { Allergies, AllergiesSchema } from './Schema/allergies.schema';
+import { Allergies, AllergiesSchema } from './schema/allergies.schema';
 import { AllergiesService } from './service/allergies/allergies.service';
 
 @Module({
@@ -13,4 +13,4 @@ import { AllergiesService } from './service/allergies/allergies.service';
   controllers: [AllergiesController],
   providers: [AllergiesService],
 })
-export class AllergiesModule {}
+export class AllergiesModule { }

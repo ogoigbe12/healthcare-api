@@ -4,7 +4,7 @@ import { UsersController } from './controller/users/users.controller';
 import { UsersService } from './service/users/users.service';
 import { JwtModule } from '@nestjs/jwt';
 
-import { User, UserSchema } from '../users/Schema/user.schema';
+import { User, UserSchema } from './schema/user.schema';
 import { UserMiddleware } from './middleware/user/user.middleware';
 @Module({
   imports: [
